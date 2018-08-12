@@ -16,8 +16,8 @@ void loop() {
 }
 
 void serialEvent() {
-  while(Serial.available()){
-    char symb = (char)Serial.read();
+  while(Serial.available()){ // Возвращает количество байт в буфере доступных для считывания
+    char symb = (char)Serial.read(); // Возвращает первый байт в очереди из буфера
     if(symb == '\n'){
       read_command_complete = true;
       break;
